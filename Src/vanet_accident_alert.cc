@@ -5,7 +5,7 @@
 #include "ns3/internet-module.h"
 #include "ns3/applications-module.h"
 #include "ns3/netanim-module.h"
-#include "ns3/ns2-mobility-helper.h"
+#include "ns3/ns2-mobility-helper.h"  
 
 using namespace ns3;
 
@@ -14,7 +14,6 @@ NS_LOG_COMPONENT_DEFINE("VANET_Accident_Alert");
 // Callback function for received packet
 void ReceivePacket(Ptr<Socket> socket)
 {
-
   Ptr<Node> node = socket->GetNode();
   int id = node->GetId();
 
@@ -39,6 +38,7 @@ void ReceivePacket(Ptr<Socket> socket)
     std::string data;
     data.resize(packet->GetSize());
     packet->CopyData((uint8_t*)data.data(), packet->GetSize());
+
     if (distance <= 150) {
       NS_LOG_UNCOND(nodeType << " " << id << " received alert: " << data << " (distance = " << distance << " )");
       // Simulator::Schedule(Seconds(0.5), [=]() {
@@ -98,7 +98,6 @@ int main(int argc, char *argv[])
   phy.Set("TxPowerStart", DoubleValue(30.0)); // in dBm, tune up or down
   phy.Set("TxPowerEnd", DoubleValue(30.0));
   YansWifiChannelHelper channel = YansWifiChannelHelper::Default();
-  channel.AddPropagationLoss("ns3::RangePropagationLossModel", "MaxRange", DoubleValue(1000.0));
   phy.SetChannel(channel.Create());
 
   WifiMacHelper mac;
@@ -139,8 +138,6 @@ int main(int argc, char *argv[])
   sender->SetAllowBroadcast(true);
   sender->Connect(remote);
 
-
-
   for (uint32_t i = 0; i < carNum; ++i) {
     if (i == 0) continue;
     Ptr<Socket> recvSocket = Socket::CreateSocket(cars.Get(i), UdpSocketFactory::GetTypeId());
@@ -159,7 +156,7 @@ int main(int argc, char *argv[])
   }
 
   // Debug: print position and distance before scheduling
-  Simulator::Schedule(Seconds(29.0), [&]() {
+  Simulator::Schedule(Seconds(49.0), [&]() {
     auto accidentMob = cars.Get(0)->GetObject<MobilityModel>();
     Vector accidentPos = accidentMob->GetPosition();
     NS_LOG_UNCOND("----Distance from Car 0----");
@@ -173,8 +170,8 @@ int main(int argc, char *argv[])
     }
   });
 
-  //Step 5: Car 0 send alert after 30s
-  Simulator::Schedule(Seconds(30.0), [&]() {
+  //Step 5: Car 0 send alert after 50s
+  Simulator::Schedule(Seconds(50.0), [&]() {
     std::string msg = "Car 0 has accident. HELP, PLEASE";
     Ptr<Packet> packet = Create<Packet>((uint8_t *)msg.c_str(), msg.length()); 
     sender->Send(packet);
