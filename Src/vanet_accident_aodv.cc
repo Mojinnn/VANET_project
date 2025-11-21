@@ -28,7 +28,7 @@ void ReceivePacket(Ptr<Socket> socket)
     Ipv4Address senderIp = address.GetIpv4();
     uint32_t packetSize = packet->GetSize();
 
-    std::cout << "RSU received alert from " << senderIp << " (" << packetSize << " bytes)" << std::endl;
+    std::cout << "RSU received alert from " << senderIp << " (" << packetSize << " bytes) at " << Simulator::Now().GetSeconds() << std::endl;
 
     // Create ACK message;
     std::ostringstream msg;
@@ -37,7 +37,7 @@ void ReceivePacket(Ptr<Socket> socket)
 
     // Send ACK back to sender;
     socket->SendTo(ackPacket, 0, InetSocketAddress(senderIp, APP_PORT));
-    std::cout << "RSU sent acknowledgement to " << senderIp << std::endl;
+    std::cout << "RSU sent acknowledgement to " << senderIp << " at " << Simulator::Now().GetSeconds() << std::endl;
   }
 }
 
@@ -155,8 +155,8 @@ int main(int argc, char *argv[])
   // connect to processing center (unicast)
   sender->Connect(InetSocketAddress(processingCenterIp, APP_PORT));
 
-  // Step: send accident alert from car 0 at 30s (AODV will route)
-  Simulator::Schedule(Seconds(30.0), [&]() {
+  // Step: send accident alert from car 0 at 50s (AODV will route)
+  Simulator::Schedule(Seconds(50.0), [&]() {
     std::string msg = "Car 0 has accident. HELP, PLEASE";
     Ptr<Packet> packet = Create<Packet>((uint8_t *)msg.c_str(), msg.length());
     sender->Send(packet);
