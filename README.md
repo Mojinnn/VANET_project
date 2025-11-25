@@ -10,10 +10,10 @@ This repository includes:
 
 * **[Docs](https://github.com/Mojinnn/VANET_project/tree/main/Docs)** — Project documentation
 
-  * **[Slides]([https://github.com/Mojinnn/VANET_project/tree/main/Docs/Slide](https://github.com/Mojinnn/VANET_project/blob/main/Docs/Slide.pdf))** — Presentation materials
-  * **[Report]([https://github.com/Mojinnn/VANET_project/tree/main/Docs/Report](https://github.com/Mojinnn/VANET_project/blob/main/Docs/Report.pdf))** — Final written report
+  * **[Slides]([https://github.com/Mojinnn/VANET_project/blod/main/Docs/Slide](https://github.com/Mojinnn/VANET_project/blob/main/Docs/Slide.pdf))** — Presentation materials
+  * **[Report]([https://github.com/Mojinnn/VANET_project/blod/main/Docs/Report](https://github.com/Mojinnn/VANET_project/blob/main/Docs/Report.pdf))** — Final written report
 
-* **[Result](https://github.com/Mojinnn/VANET_project/tree/main/Result)** — Output generated after simulation
+* **[Result](https://github.com/Mojinnn/VANET_project/tree/main/result)** — Output generated after simulation
 
   * **[PCAP files](https://github.com/Mojinnn/VANET_project/tree/main/Result/pcapfile)** — Packet captures for Wireshark analysis
   * **[TCL files](https://github.com/Mojinnn/VANET_project/tree/main/Result/tclfile)** — SUMO-generated mobility scripts
