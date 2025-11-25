@@ -4,7 +4,7 @@ This repository contains the final-term project for the **Network Programming co
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 This repository includes:
 
@@ -22,19 +22,3 @@ This repository includes:
 * **[Src](https://github.com/Mojinnn/VANET_project/tree/main/Src)** — Full simulation source code (NS-3 scripts, configs, scenario setup)
 
 * **[SUMO](https://github.com/Mojinnn/VANET_project/tree/main/SUMO)** — SUMO configuration files, routes, networks used to generate realistic vehicular mobility from a real map
-
----
-
-## 🎯 Project Goal
-
-To simulate how emergency accident alerts are transmitted between vehicles in a VANET environment, evaluate message propagation efficiency, and analyze network performance using NS-3 and SUMO.
-
----
-
-## 🛠️ Tools & Technologies
-
-* **NS-3** — Network simulation
-* **SUMO (Simulation of Urban Mobility)** — Vehicle mobility modeling
-* **NetAnim** — Visualization of NS-3 simulation results
-* **Wireshark & PCAP** — Packet-level analysis
-* **TCL, XML** — Simulation script formats and output
