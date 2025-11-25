@@ -15,9 +15,9 @@ This repository includes:
 
 * **[Result](https://github.com/Mojinnn/VANET_project/tree/main/result)** — Output generated after simulation
 
-  * **[PCAP files](https://github.com/Mojinnn/VANET_project/tree/main/Result/pcap file)** — Packet captures for Wireshark analysis
-  * **[TCL files](https://github.com/Mojinnn/VANET_project/tree/main/Result/tcl file)** — SUMO-generated mobility scripts
-  * **[XML files](https://github.com/Mojinnn/VANET_project/tree/main/Result/xml file)** — NS-3 trace output for NetAnim visualization
+  * **[PCAP files](https://github.com/Mojinnn/VANET_project/tree/main/result/pcap%20file)** — Packet captures for Wireshark analysis
+  * **[TCL files](https://github.com/Mojinnn/VANET_project/tree/main/Result/tcl%20file)** — SUMO-generated mobility scripts
+  * **[XML files](https://github.com/Mojinnn/VANET_project/tree/main/Result/xml%20file)** — NS-3 trace output for NetAnim visualization
 
 * **[Src](https://github.com/Mojinnn/VANET_project/tree/main/Src)** — Full simulation source code (NS-3 scripts, configs, scenario setup)
 
