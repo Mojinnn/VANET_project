@@ -10,8 +10,8 @@ This repository includes:
 
 * **[Docs](https://github.com/Mojinnn/VANET_project/tree/main/Docs)** — Project documentation
 
-  * **[Slides](https://github.com/Mojinnn/VANET_project/tree/main/Docs/Slide)** — Presentation materials
-  * **[Report](https://github.com/Mojinnn/VANET_project/tree/main/Docs/Report)** — Final written report
+  * **[Slides]([https://github.com/Mojinnn/VANET_project/tree/main/Docs/Slide](https://github.com/Mojinnn/VANET_project/blob/main/Docs/Slide.pdf))** — Presentation materials
+  * **[Report]([https://github.com/Mojinnn/VANET_project/tree/main/Docs/Report](https://github.com/Mojinnn/VANET_project/blob/main/Docs/Report.pdf))** — Final written report
 
 * **[Result](https://github.com/Mojinnn/VANET_project/tree/main/Result)** — Output generated after simulation
 
